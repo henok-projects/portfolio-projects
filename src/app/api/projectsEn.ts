@@ -10,7 +10,7 @@ export const projectsEn = [
         src: 'assets/images/smart-home.png',
       },
     ],
-    url: 'https://transfer-riddle-solver.herokuapp.com/index.html',
+    url: '',
     detail:
       'This project aims to implement a smart home system for our city. Users will have the ability to connect their homes to the system by gaining access to the system network. Once connected, they can rent out their homes, invite other users, add devices to their homes, create rooms, define areas, and more. Additionally, the project integrates AI technology, enabling the system to automatically track the state of both the home and the user.',
     codeSourceUrl: 'https://github.com/henok-projects/Smart-home-system',
@@ -27,7 +27,7 @@ export const projectsEn = [
         src: 'assets/images/hikel.jpg',
       },
     ],
-    url: 'https://transfer-riddle-solver.herokuapp.com/index.html',
+    url: '',
     detail:
       'This project focuses on an e-commerce service where users can buy and sell products, purchase websites, rent or utilize their sites for product selling or advertising. It includes shipping functionality for products, categorization of products, and the ability for customers to make purchases from around the world using their respective countrys currency.',
     codeSourceUrl: 'https://github.com/henok-projects/hikell-shop-integrated',
@@ -52,7 +52,7 @@ export const projectsEn = [
         src: 'assets/images/logements.webp',
       },
     ],
-    url: 'https://play.google.com/store/apps/details?id=team.traveler.teamtraveler',
+    url: '',
     detail:
       'This project primarily focuses on developing a versatile payment system that can be integrated into various projects. It aims to support a wide range of payment methods and utilizes multiple technologies and API integrations to facilitate access to those payment options.',
     codeSourceUrl:
@@ -69,16 +69,16 @@ export const projectsEn = [
         src: 'assets/images/xoka.png',
       },
     ],
-    url: 'https://transfer-riddle-solver.herokuapp.com/index.html',
-    detail: 'This project primarily focuses on food delivery. It encompasses various categories, including customers, drivers, clients, food categories, location tracking, and others.',
+    url: '',
+    detail: 'This project primarily focuses on employee management and human resource management systems to control users and employees within our company. It utilizes an in-memory database and Angular Material for implementation.',
     codeSourceUrl: 'https://github.com/henok-projects/Angular-material-sample',
     detailIsDisplayed: false,
   },
   {
     id: 'portfolio',
-    name: 'Smart home system',
+    name: 'Food delivery',
     technologies:
-      'Java, spring boot, microservice, API gateway, rabbitMQ , mysql, Eureka',
+      'Angular, Node, HTML5, CSS3, mysql, Angular material',
     images: [
       {
         title: 'Riddle',
@@ -86,8 +86,7 @@ export const projectsEn = [
       },
     ],
     url: '',
-    detail:
-      'This project aims to implement a smart home system for our city. Users will have the ability to connect their homes to the system by gaining access to the system network. Once connected, they can rent out their homes, invite other users, add devices to their homes, create rooms, define areas, and more. Additionally, the project integrates AI technology, enabling the system to automatically track the state of both the home and the user.',
+    detail: 'This project primarily focuses on food delivery. It encompasses various categories, including customers, drivers, clients, food categories, location tracking, and others.',
     codeSourceUrl: 'https://github.com/henok-projects/Smart-home-system',
     detailIsDisplayed: false,
   },
