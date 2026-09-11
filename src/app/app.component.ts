@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 interface Experience {
   role: string;
@@ -23,13 +24,18 @@ interface Project {
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  currentYear = new Date().getFullYear();
-  menuOpen = false;
-  activeProject = 'fintech';
+  readonly currentYear = new Date().getFullYear();
+  readonly email = 'henokaddis72@gmail.com';
+  readonly menuOpen = signal(false);
+  readonly activeProject = signal<string | null>('fintech');
+  readonly emailCopyStatus = signal('');
   readonly cvUrl = 'assets/Henok_Addis_Meles_Software_Engineer_CV.pdf';
 
   readonly navigation = [
@@ -115,6 +121,16 @@ export class AppComponent {
     { title: 'Frontend & practice', items: ['Angular', 'React', 'TypeScript', 'Jenkins', 'CI/CD', 'TDD', 'SOLID', 'Agile / Scrum'] }
   ];
 
-  toggleProject(projectId: string): void { this.activeProject = this.activeProject === projectId ? '' : projectId; }
-  closeMenu(): void { this.menuOpen = false; }
+  toggleMenu(): void { this.menuOpen.update((isOpen) => !isOpen); }
+  toggleProject(projectId: string): void { this.activeProject.update((activeProject) => activeProject === projectId ? null : projectId); }
+  closeMenu(): void { this.menuOpen.set(false); }
+
+  async copyEmail(): Promise<void> {
+    try {
+      await navigator.clipboard?.writeText(this.email);
+      this.emailCopyStatus.set(navigator.clipboard ? 'Email address copied. Paste it into your email app.' : `Email: ${this.email}`);
+    } catch {
+      this.emailCopyStatus.set(`Email: ${this.email}`);
+    }
+  }
 }

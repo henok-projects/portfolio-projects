@@ -1,24 +1,43 @@
-# MyPortfolio
+# Henok Addis Meles - Software Engineer Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+A recruiter-focused portfolio for Henok Addis Meles, a Senior Software Engineer specializing in Java, Spring Boot, microservices, secure APIs, fintech integrations, and enterprise software delivery.
 
-## Development server
+## Technology
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular 22 standalone application with zoneless change detection
+- TypeScript 6, RxJS 7, and the Angular esbuild/Vite build system
+- Vitest and jsdom component tests
+- Responsive, accessible, semantic one-page portfolio with CV download and structured-data metadata
 
-## Build
+## Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Use Node.js `24.15.0` or newer compatible release (Node 26 is also supported) and npm 11 or newer.
 
-## Deploy
- Open package.json and then, in script section add the following script.
+```powershell
+node --version
+npm --version
+```
 
-"scripts": {
-    // ...
-    "deploy": "ng b --prod --base-href https://USERNAME.github.io/DEPOT_NAME/ && npx ngh --dir=dist/Project_Name"
-},
+The versions must satisfy the `engines` field in `package.json`. If you use nvm for Windows, switch before installing:
 
-And now, you can build and deploy to GitHub Pages with a single command: npm run deploy
+```powershell
+nvm use 24.15.0
+```
 
+## Run locally
 
+```powershell
+npm install
+npm start
+```
 
+Open `http://localhost:4200`.
+
+## Verify and build
+
+```powershell
+npm test
+npm run build
+```
+
+The production build is written to `dist/my-portfolio`.
